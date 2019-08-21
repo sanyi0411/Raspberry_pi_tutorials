@@ -1,6 +1,6 @@
 # How to install OpenCV with Visual Studio
 
-For this tutorial I am using using Visual Studio 2017 Community edition on Windows 10.<br/>
+For this tutorial I am using Visual Studio 2017 Community edition on Windows 10.<br/>
 Currently the newest version of OpenCV is 4.1.1 but it also works with 4.1.0.</br>
 <br/>
 I assume you already have Visual Studio 2017 downloaded and installed.<br/>
