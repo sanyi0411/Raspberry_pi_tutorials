@@ -10,7 +10,7 @@ I assume you already have Visual Studio downloaded and installed.
 - In command line move in this folder
 - Go to the vcpkg repo [here](https://github.com/microsoft/vcpkg) and clone it in this folder
 - Run this command: `.\bootstrap-vcpkg.bat`
-- You will se several new files created
+- You will see several new files created
 - Run this command: `.\vcpkg integrate install`
 - At this point vcpkg is installed and available for Visual Studio
 
