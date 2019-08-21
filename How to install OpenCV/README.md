@@ -54,14 +54,14 @@ I assume you already have Visual Studio 2017 downloaded and installed.<br/>
 
 
 - Set Configuration to Release
-- Go to Linker/Input. To `Additional Dependencies` add `opencv_world411.lib` (or `opencv_world411.lib` if you downloaded OpenCV 4.1.0)
+- Go to Linker/Input. To `Additional Dependencies` add `opencv_world411.lib` (or `opencv_world410.lib` if you downloaded OpenCV 4.1.0)
 
 
 ![](images/7.png)
 
 
 - Set Configuration to Debug
-- To `Additional Dependencies` add `opencv_world411d.lib` (or `opencv_world411d.lib` if you downloaded OpenCV 4.1.0)
+- To `Additional Dependencies` add `opencv_world411d.lib` (or `opencv_world410d.lib` if you downloaded OpenCV 4.1.0)
 
 
 ![](images/8.png)
