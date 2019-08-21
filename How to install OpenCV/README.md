@@ -17,7 +17,7 @@ I assume you already have Visual Studio 2017 downloaded and installed.<br/>
 
 - On Windows 10 click the Start button on bottom left (or alternatively press the Windows key).<br/>
 - Start typing `environment` then click the `Edit the system environment variables`.<br/>
-- On the `Advanced` page click `Environment Variables..`. <br/>
+- On the `Advanced` page click `Environment Variables...`. <br/>
 - Create a `New...` System variable, the name should be `OPENCV_DIR`, the value is [the new folder that was created after running the .exe file]\build\x64\vc15<br/>
 
 
@@ -25,8 +25,8 @@ I assume you already have Visual Studio 2017 downloaded and installed.<br/>
 
 
 - In my case it's `D:\Programs\OpenCV\opencv\build\x64\vc15`<br/>
-- Click on the existing variable called 'Path', click 'Edit' and add a new line with the following:<br/>
-%OPENCV_DIR%\bin <br/>
+- Click on the existing variable called `Path`, click `Edit` and add a new line with the following:<br/>
+`%OPENCV_DIR%\bin` <br/>
 
 
 ![](images/3.png)
