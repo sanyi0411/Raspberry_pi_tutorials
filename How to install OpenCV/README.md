@@ -19,10 +19,16 @@ I assume you already have Visual Studio 2017 downloaded and installed.<br/>
 - Start typing `environment` then click the `Edit the system environment variables`.<br/>
 - On the `Advanced` page click `Environment Variables..`. <br/>
 - Create a `New...` System variable, the name should be `OPENCV_DIR`, the value is [the new folder that was created after running the .exe file]\build\x64\vc15<br/>
+
+
 ![](images/2.png)
+
+
 - In my case it's `D:\Programs\OpenCV\opencv\build\x64\vc15`<br/>
 - Click on the existing variable called 'Path', click 'Edit' and add a new line with the following:<br/>
 %OPENCV_DIR%\bin <br/>
+
+
 ![](images/3.png)
 
 ### 3. Setting up your project
@@ -30,16 +36,34 @@ I assume you already have Visual Studio 2017 downloaded and installed.<br/>
 - After creating a new Solution/Project in Visual Studio, right click on the project (in the Solution explorer) and click properties.<br/>
 - Set Configuration (top right corner) to All Configurations
 - Go to C++/General. To '`Additional Include Directories` add `$(OPENCV_DIR)\..\..\include`
+
+
 ![](images/4.png)
+
+
 - Go to C++/Precompiled Headers. Set the Precompiled Header to `Not Using Precompiled Headers`
+
+
 ![](images/5.png)
+
+
 - Go to Linker/General. To `Additional Library Directories` add `$(OPENCV_DIR)\lib`
+
+
 ![](images/6.png)
+
+
 - Set Configuration to Release
 - Go to Linker/Input. To `Additional Dependencies` add `opencv_world411.lib` (or `opencv_world411.lib` if you downloaded OpenCV 4.1.0)
+
+
 ![](images/7.png)
+
+
 - Set Configuration to Debug
 - To `Additional Dependencies` add `opencv_world411d.lib` (or `opencv_world411d.lib` if you downloaded OpenCV 4.1.0)
+
+
 ![](images/8.png)
 
 ### 4. Run a test to see everything works the way it should be
