@@ -34,7 +34,7 @@ I assume you already have Visual Studio 2017 downloaded and installed.<br/>
 ### 3. Setting up your project
 
 - After creating a new Solution/Project in Visual Studio, right click on the project (in the Solution explorer) and click properties.<br/>
-- Set Configuration (top right corner) to All Configurations
+- Set Configuration (top left corner) to All Configurations
 - Go to C++/General. To '`Additional Include Directories` add `$(OPENCV_DIR)\..\..\include`
 
 
