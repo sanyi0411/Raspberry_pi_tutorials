@@ -13,7 +13,7 @@ I assume you already have Visual Studio 2017 downloaded and installed.<br/>
 - I have put it in my `D:/Programs/OpenCV` folder, so I will refer to this later on.<br/>
 - Run the .exe and choose the same folder to extract to.<br/>
 
-### 2. Setting up the enviromental variables
+### 2. Setting up the enviroment variables
 
 - On Windows 10 click the Start button on bottom left (or alternatively press the Windows key).<br/>
 - Start typing `environment` then click the `Edit the system environment variables`.<br/>
