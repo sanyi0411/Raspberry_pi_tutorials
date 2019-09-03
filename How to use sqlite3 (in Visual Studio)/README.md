@@ -101,6 +101,7 @@ After that, receiving data is pretty simple. In this step we don't need to worry
 To visualize your data better, you can use SQLite Studio. This is a very lightweight program.</br>
 After opening the program you need to add your database.</br>
 Click Database/Add database.
+
 ![](images/1.png)
 
 You will see the tables on the left. If you click on a table you will see the columns and their properties.
