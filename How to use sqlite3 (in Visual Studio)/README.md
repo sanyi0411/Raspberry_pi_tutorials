@@ -2,7 +2,7 @@
 
 For this tutorial I am using Visual Studio 2017, on Windows 10 64bit.</br>
 If you don't have Visual Studio or sqlite3 downloaded, check out [this](https://github.com/sanyi0411/Tutorials/tree/master/How%20to%20install%20sqlite3) tutorial.</br>
-I will also include some screenshots where I use SQLite Studio to visualise the created database and the table within. You can download SQLite Studion [here](https://sqlitestudio.pl/index.rvt)
+I will also include some screenshots where I use SQLite Studio to visualise the created database and the table within. You can download SQLite Studio [here](https://sqlitestudio.pl/index.rvt)
 
 The full code is in the `main.cpp` but let's go through it step by step.
 
