@@ -97,3 +97,16 @@ To read data from the database we need a way to show/print the received data. Fo
 ```
 
 After that, receiving data is pretty simple. In this step we don't need to worry about `injection attacks`.
+
+To visualize your data better, you can use SQLite Studio. This is a very lightweight program.</br>
+After opening the program you need to add your database.</br>
+Click Database/Add database.
+![](images/1.png)
+
+You will see the tables on the left. If you click on a table you will see the columns and their properties.
+
+![](images/2.png)
+
+Click on `Data` to see all the lines you inserted.
+
+![](images/3.png)
