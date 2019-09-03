@@ -34,8 +34,8 @@ int main()
         CREATE TABLE IF NOT EXISTS myFirstTable(
             id              INTEGER    PRIMARY KEY AUTOINCREMENT,
             name            TEXT       NOT NULL,
-			code			INTEGER	   NOT NULL,
-			added			DATETIME   NOT NULL,
+	    code	    INTEGER    NOT NULL,
+	    added           DATETIME   NOT NULL,
             UNIQUE(name));)";
 
 	errorCode = sqlite3_exec(dataBase, createTable.c_str(), callback, nullptr, &errorMessage);
