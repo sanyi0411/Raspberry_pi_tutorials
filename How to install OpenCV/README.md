@@ -7,7 +7,7 @@ I assume you already have Visual Studio 2017 downloaded and installed.<br/>
 
 ### 1. Download OpenCV
 
-- Go to the [OpenCV website](https://opencv.org/releases/), under `Releases` find `OpenCV - 4.1.1` and click the `Windows` buttons.<br/>
+- Go to the [OpenCV website](https://opencv.org/releases/), under `Releases` find `OpenCV - 4.1.1` and click the `Windows` button.<br/>
 ![OpenCV site](images/1.png)
 - Download the .exe file and put in a separate folder(the .exe should be around 220 MB).<br/>
 - I have put it in my `D:/Programs/OpenCV` folder, so I will refer to this later on.<br/>
