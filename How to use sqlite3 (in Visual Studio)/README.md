@@ -29,8 +29,8 @@ The function returns an integer. If the database was opened succesfully it retur
         CREATE TABLE IF NOT EXISTS myFirstTable(
             id              INTEGER    PRIMARY KEY AUTOINCREMENT,
             name            TEXT       NOT NULL,
-			code			INTEGER	   NOT NULL,
-			added			DATETIME   NOT NULL,
+	    code    	    INTEGER    NOT NULL,
+	    added	    DATETIME   NOT NULL,
             UNIQUE(name));)";
 
 	errorCode = sqlite3_exec(dataBase, createTable.c_str(), callback, nullptr, &errorMessage);
@@ -72,9 +72,9 @@ To pass any query to sqlite you need to pass it as a string. Raw string literal 
 		std::cout << "Success inserting data\n";
 	}
 ```
-Inserting data into a table is a bit tricky. We need to take measures against any "SQL Injection attacks". If you don't know what that is, please google it first. Here we are inserting only 3 values even though we have 4 columns. This is because the first column is set to `autoincrement`. The text of the query is now of type `const char *` (unlike in the previous step where it was std::string), so we don't need to call the `c_str()` method on it. I made this on purpose to show you a different way of doing it.We could have done </br>
-In the text of the query the places for the actual data is left open. `?` marks these places. Then we need to prepare the data. This basically tells the program that anything will be inserted in those blank spaces in the next step, it must consider it as the data, not part of the query. This way we can evade any evil attacks.</br>
-Then we bind the data to the query. For this you need to call type specific functions (as you can see in the code). To execute the final query we need to call the `sqlite3_step` function, not the `sqlite3_exec` as before. This also returns an integer but in case of a successful run a different value than `sqlite3_exec` so we need to check it against a different enum value.
+Inserting data into a table is a bit tricky. We need to take measures against any "SQL Injection attacks". If you don't know what that is, please google it first. Here we are inserting only 3 values even though we have 4 columns. This is because the first column is set to `autoincrement`. The text of the query is now of type `const char *` (unlike in the previous step where it was std::string), so we don't need to call the `c_str()` method on it. I made this on purpose to show you a different way of doing it. We could have done it this way in the previous step too.</br>
+In the text of the query the places for the actual data are left open. `?` marks these places. Then we need to prepare the data. This basically tells the program that anything will be inserted in those blank spaces in the next step, it must consider it as the data, not part of the query. This way we can evade any evil attacks.</br>
+Then we bind the data to the query. For this you need to call type specific functions (as you can see in the code). To execute the final query we need to call the `sqlite3_step` function, not the `sqlite3_exec` as before. This also returns an integer but in case of a successful run a different value than `sqlite3_exec` so we need to check it against a different defined value.
 
 ```C++
 static int callback(void *data, int argc, char **argv, char **azColName)
