@@ -31,6 +31,8 @@ I assume you already have Visual Studio 2017 downloaded and installed.<br/>
 
 ![](images/3.png)
 
+- Note that you have to restart your computer at this point. New environment variables will only come into effect after a restart.
+
 ### 3. Setting up your project
 
 - After creating a new Solution/Project in Visual Studio, right click on the project (in the Solution explorer) and click properties.<br/>
