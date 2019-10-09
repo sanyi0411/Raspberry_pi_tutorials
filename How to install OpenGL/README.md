@@ -29,6 +29,10 @@ I assume you already have Visual Studio downloaded and installed
 
 ![](images/4.png)
 
+- Under `System variables` double click `Path` then add a `New` line as the following:
+
+![](images/5.png)
+
 - Note that you have to restart your computer at this point. New environment variables will only come into effect after a restart.
 
 ### Setting up your project
@@ -37,20 +41,16 @@ I assume you already have Visual Studio downloaded and installed
 - In the top row set `Configuration` to `All configurations` and `Platform` to `All platforms`
 - Go to C/C++, then General and in the `Additional Include Directories` set the following:
 
-![](images/5.png)
+![](images/6.png)
 
 - Set the `Platform` to `x64`
 - Go to Linker, then General and in the `Additional Library Directories` set the following:
 
-![](images/6.png)
+![](images/7.png)
 
 - Go to Linker, then Input and add the following `Additional Dependencies`:
 
-![](images/7.png)
-
-- There is one more .dll file that the system will need but will not find it this way so we need to copy it:
-- Go to your `GLEW` folder, then `bin` -> `Release` -> `x64` and in there should be a `glew32.dll`
-- Copy this file in your project folder, next to your .cpp, .vcxproj and .filters files
+![](images/8.png)
 
 ### Run a test
 
