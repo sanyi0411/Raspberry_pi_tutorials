@@ -5,49 +5,51 @@ I assume you already have Visual Studio downloaded and installed
 
 ### Downloads
 
-- Go to [glew.sourceforge.net](http://glew.sourceforge.net/), in the 'Downloads' section click the latest release
+- Go to [glew.sourceforge.net](http://glew.sourceforge.net/), in the `Downloads` section click the latest release
 
 ![](images/1.png)
 
-- This will take you to another site from where you should download the '...win32.zip' version
+- This will take you to another site from where you should download the `...win32.zip` version
 
-- Go to [glfw.org](https://www.glfw.org/), click 'Download' on the top right and under the 'Windows pre-compiled binaries' download the 64bit version
+- Go to [glfw.org](https://www.glfw.org/), click `Download` on the top right and under the `Windows pre-compiled binaries` download the 64bit version
 
 ![](images/2.png)
 
 - I have set up my file system the following:
-- 'D:/Programs/OpenGL/GLEW/' -> In here are the files/folders that I have downloaded from the first link, so like 'bin', 'doc', 'include' etc.
-- 'D:/Programs/OpenGL/GLFW/' -> In here are the files/folders that I have downloaded from the second link, so like 'docs', 'include', 'lib-vc2017' etc.
+- `D:/Programs/OpenGL/GLEW/` -> In here are the files/folders that I have downloaded from the first link, so like `bin`, `doc`, `include` etc.
+- `D:/Programs/OpenGL/GLFW/` -> In here are the files/folders that I have downloaded from the second link, so like `docs`, `include`, `lib-vc2017` etc.
 
 ![](images/3.png)
 
 ### Environment variables
 
-- Hit your 'Windows key' and start typing 'environment', click the 'Edit the system environment variables'
-- In the 'Advanced' section click 'Environment variables...2' at the bottom
-- Under 'System variables' add a 'New' variable: the name should be 'OPENGL_DIR' and the value is the path to your OpenGL folder, so in my case: 'D:/Programs/OpenGL'
+- Hit your `Windows key` and start typing `environment`, click the `Edit the system environment variables`
+- In the `Advanced` section click `Environment variables...` at the bottom
+- Under `System variables` add a `New` variable: the name should be `OPENGL_DIR` and the value is the path to your OpenGL folder, so in my case: `D:/Programs/OpenGL`
 
 ![](images/4.png)
 
+- Note that you have to restart your computer at this point. New environment variables will only come into effect after a restart.
+
 ### Setting up your project
 
-- After creating a new C++ project in Visual Studio, right click on the project in the 'Solution explorer', then click 'Properties'
-- In the top row set 'Configuration' to 'All configurations' and 'Platform' to 'All platforms'
-- Go to C/C++, then General and in the 'Additional Include Directories' set the following:
+- After creating a new C++ project in Visual Studio, right click on the project in the `Solution explorer`, then click `Properties`
+- In the top row set `Configuration` to `All configurations` and `Platform` to `All platforms`
+- Go to C/C++, then General and in the `Additional Include Directories` set the following:
 
 ![](images/5.png)
 
-- Set the 'Platform' to 'x64'
-- Go to Linker, then General and in the 'Additional Library Directories' set the following:
+- Set the `Platform` to `x64`
+- Go to Linker, then General and in the `Additional Library Directories` set the following:
 
 ![](images/6.png)
 
-- Go to Linker, then Input and add the following 'Additional Dependencies':
+- Go to Linker, then Input and add the following `Additional Dependencies`:
 
 ![](images/7.png)
 
 - There is one more .dll file that the system will need but will not find it this way so we need to copy it:
-- Go to your 'GLEW' folder, then 'bin' -> 'Release' -> 'x64' and in there should be a 'glew32.dll'
+- Go to your `GLEW` folder, then `bin` -> `Release` -> `x64` and in there should be a `glew32.dll`
 - Copy this file in your project folder, next to your .cpp, .vcxproj and .filters files
 
 ### Run a test
