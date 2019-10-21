@@ -1,5 +1,9 @@
 # How to install OpenCV with Visual Studio
 
+**Note**:
+- If you want to see basic tutorials on how to use OpenCV, check out my other repo: [OpenCV](https://github.com/green-fox-academy/sanyi0411/tree/master/OpenCV)
+- If you want to use `Text recognition` in your application, you will find instructions on how to add `tesseract` to your project at the end of this tuorial
+
 For this tutorial I am using Visual Studio 2017 Community edition on Windows 10 64bit.<br/>
 Currently the newest version of OpenCV is 4.1.1 but it also works with 4.1.0.</br>
 <br/>
@@ -31,7 +35,7 @@ I assume you already have Visual Studio 2017 downloaded and installed.<br/>
 
 ![](images/3.png)
 
-- Note that you have to restart your computer at this point. New environment variables will only come into effect after a restart.
+- **Note** that you have to restart your computer at this point. New environment variables will only come into effect after a restart.
 
 ### 3. Setting up your project
 
@@ -85,3 +89,25 @@ int main()
 }
 ```
 - If a blue window pups up all should be fine
+
+### +1: Tesseract
+
+- With [Tesseract](https://en.wikipedia.org/wiki/Tesseract_(software)) you can recognise characters and "read text"
+- To install tesseract, first you will need a package manager called `vcpkg`
+- Go to [Microsoft's vcpkg repo](https://github.com/microsoft/vcpkg) and follow the instructions there: you will have clone the repo on your computer but then you only need the `To get started` and `user-wide integration` sections
+- In your Command Window navigate to the cloned `vcpkg` folder and run the following code: `vcpkg install tesseract:x64-windows`
+- For more info on installing tesseract check out their official [Repo](https://github.com/tesseract-ocr/tesseract/wiki/Compiling#windows)
+- Tesseract uses pre-trained models to recognise characters. Since there are different characters in different languages, there are different models for (almost) each language. I will show you how to add a model trained for english language. From then on you can add different models if you want to.
+- In your `vcpkg` folder, deep inside, there is a folder called `tessdata`. I have cloned the `vcpkg` repo to my `D:\Programs` folder so for me the path to `tessdata` is the following: `D:\Programs\vcpkg\buildtrees\tesseract\src\4.1.0-adb63d30fa\tessdata`
+- Find the `tessdata` folder according to this
+
+![](images/9.png)
+
+- Download the pre-trained model from [here](https://github.com/tesseract-ocr/tessdata/blob/master/eng.traineddata)
+- Save this `eng.traineddata` file to your `tessddata` folder
+- Right now tesseract doesn't know that it should look for this file here
+- We need to add a new `Environment variable`, as we did earlier in this tutorial
+- The name should be `TESSDATA_PREFIX` and the value is the path to this `tessdata` folder
+- **Note** that you will have to restart your computer for the new Environment variable to come into effect
+
+![](images/10.png)
