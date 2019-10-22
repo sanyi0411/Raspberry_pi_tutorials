@@ -2,7 +2,7 @@
 
 **Note**:
 - If you want to see basic tutorials on how to use OpenCV, check out my other repo: [OpenCV](https://github.com/green-fox-academy/sanyi0411/tree/master/OpenCV)
-- If you want to use `Text recognition` in your application, you will find instructions on how to add `tesseract` to your project at the end of this tuorial
+- If you want to use `Text recognition` in your application, you will find instructions on how to add `tesseract` to your project at the end of this tutorial
 
 For this tutorial I am using Visual Studio 2017 Community edition on Windows 10 64bit.<br/>
 Currently the newest version of OpenCV is 4.1.1 but it also works with 4.1.0.</br>
@@ -88,6 +88,7 @@ int main()
 	cv::waitKey(0);
 }
 ```
+- Make sure your project is set to `x64` at the top
 - If a blue window pups up all should be fine
 
 ### +1: Tesseract
