@@ -89,13 +89,13 @@ int main()
 }
 ```
 - Make sure your project is set to `x64` at the top
-- If a blue window pups up all should be fine
+- If a blue window pops up all should be fine
 
 ### +1: Tesseract
 
 - With [Tesseract](https://en.wikipedia.org/wiki/Tesseract_(software)) you can recognise characters and "read text"
 - To install tesseract, first you will need a package manager called `vcpkg`
-- Go to [Microsoft's vcpkg repo](https://github.com/microsoft/vcpkg) and follow the instructions there: you will have clone the repo on your computer but then you only need the `To get started` and `user-wide integration` sections
+- Go to [Microsoft's vcpkg repo](https://github.com/microsoft/vcpkg) and follow the instructions there: you will have to clone the repo on your computer but then you only need the `To get started` and `user-wide integration` sections
 - In your Command Window navigate to the cloned `vcpkg` folder and run the following code: `vcpkg install tesseract:x64-windows`
 - For more info on installing tesseract check out their official [Repo](https://github.com/tesseract-ocr/tesseract/wiki/Compiling#windows)
 - Tesseract uses pre-trained models to recognise characters. Since there are different characters in different languages, there are different models for (almost) each language. I will show you how to add a model trained for english language. From then on you can add different models if you want to.
