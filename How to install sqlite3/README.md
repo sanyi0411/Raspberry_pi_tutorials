@@ -7,7 +7,7 @@ I assume you already have Visual Studio downloaded and installed.
 ### Install vcpkg
 
 - Create a new folder where you want to put the files
-- In command line move in this folder
+- In command line navigate into this folder
 - Go to the vcpkg repo [here](https://github.com/microsoft/vcpkg) and clone it in this folder
 - Run this command: `.\bootstrap-vcpkg.bat`
 - You will see several new files created
