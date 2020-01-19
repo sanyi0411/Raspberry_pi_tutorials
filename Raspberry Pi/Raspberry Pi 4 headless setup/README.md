@@ -151,17 +151,17 @@ network={
 ## 7.b If you are connected via ethernet cable
 
 - Open Angry IP scanner
-- The IP Range should be the as the one you took note of in step 5.2, only from 0 to 255 (see step 7.1)
+- The IP Range should be the as the one you took note of in step 5.2, only from 0 to 255 (see step 7.a)
 - Press start and look for the *raspberrypi.local* in the results
 
 # 8. Connect to the Pi
 - Open PuTTY
 - On the starting page, type in the IP address
-- Alternatively you can type in *raspberrypi.local*. This way you don't have to find the Pi's IP address (step 7) but it's guaranteed to work. I had times when even Angry IP scanner could find the Pi but if I put the IP in here (which I knew because of previous connections), I could easily connect.
+- Alternatively you can type in `raspberrypi.local`. This way you don't have to find the Pi's IP address (step 7) but it's guaranteed to work. I had times when even Angry IP scanner could find the Pi but if I put the IP in here (which I knew because of previous connections), I could easily connect.
 
 ![](images/11.jpg)
 
-- In the *Category*, on the left hand side, find Connections/SSH/X11
+- In the `Category`, on the left hand side, find `Connections/SSH/X11`
 - Enable X11 forwarding
 - In general X11 forwarding is used to run graphical applications on a server (normally servers should not have an X server or graphical applications running)
 
