@@ -75,19 +75,19 @@ network={
  psk="<Password for your WiFi>"
 }
 ```
-- Insert your coutry code, SSID(the name of your Wifi network) and password where it says (Delete the `<>` brackets too)
+- Insert your coutry code, SSID(the name of your Wifi network) and password where it says (Delete the `<>` brackets too but leave the quotation marks)
 - You can find your ISO alpha-2 country code [here](https://en.wikipedia.org/wiki/List_of_ISO_3166_country_codes)
 - You can put log-in information about multiple Wifi network in this file (e.g. if you are using it at home, in your school, workplace etc.). Just add multiple `network = {}` sections
 ```
 network={
-    ssid=<SCHOOLS NETWORK NAME>
-    psk=<SCHOOLS PASSWORD>
+    ssid="<SCHOOLS NETWORK NAME>"
+    psk="<SCHOOLS PASSWORD>"
     id_str="school"
 }
 
 network={
-    ssid=<HOME NETWORK NAME>
-    psk=<HOME PASSWORD>
+    ssid="<HOME NETWORK NAME>"
+    psk="<HOME PASSWORD>"
     id_str="home"
 }
 ```
