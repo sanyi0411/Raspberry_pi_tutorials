@@ -145,7 +145,7 @@ network={
 
 ![](images/9.jpg)
 
-- Press start and look for the *raspberrypi.local* in the results. **NOTE**: After booting up it can take 1 or 2 minutes for the Pi to connect to the Wifi, so if at first you can find it, wait a bit and run it again
+- Press start and look for the *raspberrypi.local* in the results. **NOTE**: After booting up it can take 1 or 2 minutes for the Pi to connect to the Wifi, so if at first you can't find it, wait a bit and run it again
 - Take note of this IP
 
 ## 7.b If you are connected via ethernet cable
