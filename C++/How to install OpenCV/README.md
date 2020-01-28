@@ -5,7 +5,7 @@
 - If you want to use `Text recognition` in your application, you will find instructions on how to add `tesseract` to your project at the end of this tutorial
 
 For this tutorial I am using Visual Studio 2017 Community edition on Windows 10 64bit.<br/>
-Currently the newest version of OpenCV is 4.1.1 but it also works with 4.1.0.</br>
+Currently the newest version of OpenCV is 4.1.1 but it also works with 4.1.0.<br/>
 <br/>
 I assume you already have Visual Studio 2017 downloaded and installed.<br/>
 
