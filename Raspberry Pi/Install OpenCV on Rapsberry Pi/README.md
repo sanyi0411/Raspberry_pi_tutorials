@@ -1,11 +1,11 @@
 # Install OpenCV 4 on Raspberry Pi 4
 
-There is a great tutorial made by Adrian Rosebrock, over on [Pyimagesearch](https://www.pyimagesearch.com/2019/09/16/install-opencv-4-on-raspberry-pi-4-and-raspbian-buster/). I used that to install OpenCV on my Pi and it worked great<br/>
-So all credits go to him, this is basically is just an extraction of his work.<br/>
-Check out the original [here](https://www.pyimagesearch.com/2019/09/16/install-opencv-4-on-raspberry-pi-4-and-raspbian-buster/)
+There is a great tutorial made by Adrian Rosebrock, over on [Pyimagesearch](https://www.pyimagesearch.com/2019/09/16/install-opencv-4-on-raspberry-pi-4-and-raspbian-buster/). I used that to install OpenCV on my Pi and it worked great.<br/>
+So all credits go to him, this is basically just an extraction of his work.<br/>
+Check out the original [here](https://www.pyimagesearch.com/2019/09/16/install-opencv-4-on-raspberry-pi-4-and-raspbian-buster/).
 
 I assume you have Raspberry Pi with Raspbian Buster installed on it.
-If you haven't installed Raspbian yet, check out [this tutorial](https://github.com/sanyi0411/Tutorials/tree/master/Raspberry%20Pi/Raspberry%20Pi%204%20headless%20setup)
+If you haven't installed Raspbian yet, check out [this tutorial](https://github.com/sanyi0411/Tutorials/tree/master/Raspberry%20Pi/Raspberry%20Pi%204%20headless%20setup).
 
 I am not going to go into details on what these commands do and why need that, for that see the original tutorial.<br/>
 Run these commands in this order:<br/>
