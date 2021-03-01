@@ -15,20 +15,24 @@ There are 2 ways to install CMake on Ubuntu but the easier and faster way may no
 
 1. Install from command line
     - Open a command line and run `apt search cmake\$` to see the available version
+
+![latest CMake version from command line](images/1.jpg)
+
     - At the time of writing the latest release you can get this way is 3.16.3
     - Run `sudo apt-get install cmake` to download and install CMake
     - Verify the installation by running `cmake --version`
-![latest CMake version from command line](images/1.jpg)
 
 2. Install from shell script
     - Open a browser and go to `cmake.org/download/`
     - Find the Linux version and download the belonging shell script (file name ends with **.sh**)
     - At the timw of writing the latest version on the website is 3.20.0
         - Now you can see why it is better to download CMake from the website
+
+![cmake.org/download](images/2.jpg)
+
     - Run the shell script by `sudo sh cmake.sh --prefix=/usr/local`
         - You can use prefix argument to specify the install location
     - Verify the installation by running `cmake --version`
-![cmake.org/download](images/2.jpg)
 
 ### Windows
 
