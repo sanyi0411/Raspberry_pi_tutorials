@@ -234,7 +234,8 @@ add_library(Vehicles Vehicle.h Vehicle.cpp)
 - Create a `lib` folder in the project root
 - Clone or download az ZIP the googletest repo from `https://github.com/google/googletest`
 - Copy the googletest folder into the `lib` folder
-- Create a `test` folder in the project root. We will put the test files here
+- Create a `tests` folder in the project root. We will put the test files here
+- Don't forget to make a CMakeLists.txt in this `tests` folder
 
 ```
 CMake_example
@@ -252,5 +253,7 @@ CMake_example
             `- Vehicle.cpp
         |- CMakeLists.txt
         `- main.cpp
+    |- test
+        `- CMakeLists.txt
     `-CMakeLists.txt
 ```
