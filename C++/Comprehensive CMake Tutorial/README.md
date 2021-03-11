@@ -2,10 +2,29 @@
 
 ## What is CMake
 
+It is definitely possible to build your C or C++ code without a build framework. But as your project gets bigger, more and more people start working on it, using only gcc or clang becomes difficult. The number of flags you will use, will just grow and it will be cumbersome to type everything in the command line.
+
+That's why Make was made. Make is a build automation tool that helps you build your executables faster and more reliable. You only have to set it up once and it does the rest. 
+
+But Make is still platform dependent. If you are planning on targeting multiple platforms you will need multiple makefiles. All the variables in the makefiles are also platform dependent so you will have to know all of them to write and maintain a makefile.
+
+This is where CMake comes in. CMake is platform independent so you only need write it once and it will create the platform dependent makefile automatically depending on the machine it runs on.
+
+CMake, by defualt, uses Make as its build tool but you can set it up with anything you like.
+
 <hr>
 
 ## Prerequisities
-//TODO: have gcc or clang installed
+
+You need to have gcc or clang installed
+
+- Open up a terminal or command line window
+- Run `gcc --version`
+    - If the return is `Command gcc not found` you don't have it installed
+    - If the return is a version number you are good to go
+- Run `clang --version`
+    - If the return is `Command clang not found` you don't have it installed
+    - If the return is a version number you are good to go
 
 <hr>
 
