@@ -96,7 +96,7 @@ There are 2 ways to install CMake on Ubuntu but the easier and faster way may no
 
 2. Build using cmake
     - *cmake* is a command line interface (as opposed to ccmake)
-    - Go to your build folder and run `cmake ..`
+    - Go to your **build** folder and run `cmake ..`
         - By default CMake will generate the Makefile (and other necessary files) at the current working directory
         - As an argument you have to provide the path to root. There CMake will look for a CMakeLists.txt, so make sure you put it there
     - You should see outputs like
@@ -110,7 +110,7 @@ There are 2 ways to install CMake on Ubuntu but the easier and faster way may no
     - In the build folder now there is a Makefile
         - If you open it you can see that the environment variables are specific to your machine
         - This is why we need the platform independent CMake: to generate platform dependent Makefiles
-    - Now you can run `make` from the build folder, which will create the HelloWorld executable. Run it by `./HelloWorld`
+    - Now you can run `make` from the **build** folder, which will create the HelloWorld executable. Run it by `./HelloWorld`
     - It is possible to use CMake with a different generator than Make, so the `make` command wouldn't work this case
     - The solution for this is to use the `cmake --build .` command
         - This will use whatever generator you set up for your project
