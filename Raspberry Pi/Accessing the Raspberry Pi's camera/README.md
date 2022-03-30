@@ -1,7 +1,7 @@
 # Accessing the Raspberry Pi's camera
 
-- First you will need a camera module. There is built-in camera on the Raspberry Pi. You will have to buy one separately.
-- Connect the camera module to the Pi. You can find nice picture online on how to do this. I will upload some here if I will have.
+- First you will need a camera module. There is no built-in camera on the Raspberry Pi. You will have to buy one separately.
+- Connect the camera module to the Pi. You can find pictures online on how to do this. I will upload some here if I will have.
 - Start the Pi and in the terminal run this command: 
 
 `sudo raspi-config`
