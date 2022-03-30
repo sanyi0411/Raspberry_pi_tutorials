@@ -299,3 +299,28 @@ Searches for the files after NAMES in the PATHS folders and returns the full par
 -------
 Searches for the files after NAMES in the PATHS folders, returns the full path of the first found file
 - `find_library(SDL_LIBRARY NAMES SDL2.lib SDL2d.lib PATHS "${SDL_LIBRARY_PATH}")`
+
+-------
+Block comment:
+```cmake
+#[[
+This
+is
+a
+multi line
+comment
+]]
+```
+-------
+Print all variables:
+```
+macro(print_all_variables)
+    message(STATUS "print_all_variables------------------------------------------{")
+    get_cmake_property(_variableNames VARIABLES)
+    foreach (_variableName ${_variableNames})
+        message(STATUS "${_variableName}=${${_variableName}}")
+    endforeach()
+    message(STATUS "print_all_variables------------------------------------------}")
+endmacro()
+print_all_variables()
+```
