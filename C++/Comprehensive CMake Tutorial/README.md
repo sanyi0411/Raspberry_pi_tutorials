@@ -118,13 +118,13 @@ There are 2 ways to install CMake on Ubuntu but the easier and faster way may no
 3. Build using ccmake
     - *ccmake* is a terminal based gui. It is somewhere between a command line interface and a nice, windowed GUI, like cmake GUI
     - Go to your build folder and run `ccmake ..`
-        - It should automatically configure but if not press c to start it
+        - It should automatically configure but if not press **c** to start it
     - At the bottom you can see hints for available hotkeys
-    - Press t to toggle advenced mode
+    - Press **t** to toggle advenced mode
     - You can see all the variables that CMake uses
     - Find the CMAKE_CXX_COMPILER variable. You can see that it found, for example, gcc or clang as your compiler.
-    - At this point you can overwrite these variables. For example change gcc to clang. If you did, press c again to reconfigure
-    - Press g to generate and exit. This will generate the Makefile
+    - At this point you can overwrite these variables. For example change gcc to clang. If you did, press **c** again to reconfigure
+    - Press **g** to generate and exit. This will generate the Makefile
     - Now you can run `make`, which will create the HelloWorld executable. Run it by `./HelloWorld`
 
 <hr>
@@ -149,7 +149,7 @@ CMake_example
     `-CMakeLists.txt
 ```
 
-- Each folder you are using should have it's CMakeLists.tx file
+- Each folder you are using should have it's CMakeLists.txt file
 
 The root CMakeLists.txt:
 ```
@@ -166,7 +166,7 @@ add_subdirectory(src)
 ```
 
 - With the *set()* function we can give values to variables
-- The first argument is the name of the variable, the second is its value.
+    - The first argument is the name of the variable, the second is its value.
 - Any variable starting with `CMAKE_` or `_CMAKE_` is a CMake variable
 - The `CMAKE_CXX_STANDARD` variable sets the wanted C++ version. In this case we are using C++17
 - You can create your own variables. See the *EXAMPLE_VARIABLE*
@@ -276,3 +276,26 @@ CMake_example
         `- CMakeLists.txt
     `-CMakeLists.txt
 ```
+--------
+
+GTest as submodule (it just works):
+- `git submodule add https://github.com/google/googletest`
+- ./CMakeLists:
+    - add_subdirectory(submodules/googletest)
+    - include_directories(submodules/googletest/googletest/include/gtest)
+- tests/CMakeLists.txt:
+    - include_directories(${PROJECT_SOURCE_DIR}/src)
+    - add_executable(${PROJECT_TESTS_NAME} main.cpp)
+    - target_link_libraries(${PROJECT_TESTS_NAME} PUBLIC gtest_main)
+
+--------
+Execute process at configure time:
+- `execute_process(COMMAND "${CMAKE_COMMAND}" -G "${CMAKE_GENERATOR}" WORKING_DIRECTORY "${CMAKE_BINARY_DIR}/sdl2-download")`
+- `execute_process(COMMAND "${CMAKE_COMMAND}" --build . WORKING_DIRECTORY "${CMAKE_BINARY_DIR}/sdl2-download")`
+
+--------
+Searches for the files after NAMES in the PATHS folders and returns the full parent folder path of the first find in the first parameter:
+- `find_path(SDL_LIBRARY_PATH NAMES SDL2.lib SDL2d.lib PATHS ${CMAKE_BINARY_DIR}/sdl2-build ${CMAKE_BINARY_DIR}/sdl2-build/Release ${CMAKE_BINARY_DIR}/sdl2-build/Debug)`
+-------
+Searches for the files after NAMES in the PATHS folders, returns the full path of the first found file
+- `find_library(SDL_LIBRARY NAMES SDL2.lib SDL2d.lib PATHS "${SDL_LIBRARY_PATH}")`
