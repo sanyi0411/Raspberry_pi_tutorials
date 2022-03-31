@@ -327,15 +327,33 @@ print_all_variables()
 
 ------
 Most important cmake variables:
-- ${PROJECT_NAME}_BINARY_DIR   # build folder
-- CMAKE_BINARY_DIR             # path to the top level of the build tree(same as above)
-- CMAKE_BUILD_TYPE_INIT        # can be "Release", "Debug" ...
-- CMAKE_CONFIGURATION_TYPES    # possible types for the above
-- CMAKE_COMMAND                # where your cmake.exe is located
-- CMAKE_CTEST_COMMAND          # where your ctest.exe is located
-- CMAKE_CURRENT_BINARY_DIR     # path to the binary directory currently being processed
-- CMAKE_CURRENT_SOURCE_DIR     # path to the source directory currently being processed
-- MSVC                         # =1 if you use MSVC, not existing otherwise
-- PROJECT_BINARY_DIR           # the binary directory of the most recent project() command
-- PROJECT_SOURCE_DIR           # the source directory of the last call to the project() command
-- 
+
+| Variable                   |      Description      |
+|----------                  |:---------------------:|
+| ${PROJECT_NAME}_BINARY_DIR |      build folder     |
+| CMAKE_BINARY_DIR           |    path to the top level of the build tree (same as above)   | 
+| CMAKE_BUILD_TYPE_INIT      | can be "Release", "Debug" ...                          |
+| CMAKE_BUILD_TYPE           | can be "Release", "Debug" ...                          |
+| CMAKE_CONFIGURATION_TYPES  | possible types for the above                           |
+| CMAKE_COMMAND              | where your cmake.exe is located                        |
+| CMAKE_CTEST_COMMAND        | where your ctest.exe is located                        |
+| CMAKE_CURRENT_BINARY_DIR   | path to the binary directory currently being processed |
+| CMAKE_CURRENT_SOURCE_DIR   | path to the source directory currently being processed |
+| MSVC                       | =1 if you use MSVC, not existing otherwise             |
+| UNIX                       | =1 if you are buling on Linux or MacOS, not existing otherwise |
+| PROJECT_BINARY_DIR         | the binary directory of the most recent project() command      |
+| PROJECT_SOURCE_DIR         | the source directory of the last call to the project() command |
+
+------------
+Run a command before/after a specific target has been built:
+```
+add_custom_command(TARGET library1 POST_BUILD
+        COMMAND ${CMAKE_COMMAND} -E copy
+        ${CMAKE_CURRENT_BINARY_DIR}/${CMAKE_BUILD_TYPE}/libfoo.dll          # source
+        ${CMAKE_BINARY_DIR}/mainProject/${CMAKE_BUILD_TYPE}/libfoo.dll      # target
+)
+```
+
+PRE_BUILD - run before all other dependencies\
+PRE_LINK - run after other dependencies\
+POST_BUILD - run after the target has been built\
