@@ -324,3 +324,18 @@ macro(print_all_variables)
 endmacro()
 print_all_variables()
 ```
+
+------
+Most important cmake variables:
+- ${PROJECT_NAME}_BINARY_DIR   # build folder
+- CMAKE_BINARY_DIR             # path to the top level of the build tree(same as above)
+- CMAKE_BUILD_TYPE_INIT        # can be "Release", "Debug" ...
+- CMAKE_CONFIGURATION_TYPES    # possible types for the above
+- CMAKE_COMMAND                # where your cmake.exe is located
+- CMAKE_CTEST_COMMAND          # where your ctest.exe is located
+- CMAKE_CURRENT_BINARY_DIR     # path to the binary directory currently being processed
+- CMAKE_CURRENT_SOURCE_DIR     # path to the source directory currently being processed
+- MSVC                         # =1 if you use MSVC, not existing otherwise
+- PROJECT_BINARY_DIR           # the binary directory of the most recent project() command
+- PROJECT_SOURCE_DIR           # the source directory of the last call to the project() command
+- 
