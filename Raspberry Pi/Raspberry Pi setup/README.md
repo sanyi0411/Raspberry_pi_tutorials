@@ -35,4 +35,4 @@ Last update: november 2023
 - Click `Save` and flash the SD card.
 - After completition insert the SD card in the Pi.
 - If you choose a dektop vesion of the OS you are ready to use it.
-- If you want to connect to the Pi from a terminal [follow this tutorial]().
+- If you want to connect to the Pi from a terminal [follow this tutorial](https://github.com/sanyi0411/Tutorials/tree/master/Raspberry%20Pi/Connect%20to%20Pi%20via%20SSH).
