@@ -30,6 +30,7 @@ static domain_name_servers=192.168.0.1
 - Replace the interface and the IP addresses as needed.
 - You can add this section twice. Once for `eth0` and once for `wlan0`
 - Reboot by running `sudo shutdown -r now`
+- Run `hostname -I` to check if the changes worked
 
 <u>Option B</u>
 
