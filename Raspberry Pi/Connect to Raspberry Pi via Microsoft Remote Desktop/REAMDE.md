@@ -1,5 +1,7 @@
 # Connect to Raspberry Pi via Microsoft Remote Desktop
 
+Last update: december 2023
+
 - ssh into your Raspberry Pi or 
 - open a new terminal on the Pi if you have access to its desktop
 - Run `sudo apt-get update && sudo apt-get upgrade`
