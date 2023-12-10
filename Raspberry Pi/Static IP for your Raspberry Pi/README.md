@@ -1,5 +1,7 @@
 # Static IP for your Raspberry Pi
 
+Last update: december 2023
+
 <u>Option A</u>
 - ssh into the Pi or open a new terminal on the Pi desktop
 - Run `hostname -I`
