@@ -1,5 +1,7 @@
 # qBittorrent on Raspberry Pi
 
+Last update: december 2023
+
 ### <u>Option A - Desktop version</u>
 - You can use this version if you have access to the Pi's desktop and you can use a mouse and a keyboard with the Pi
 - You cannot use this version if you only have a terminal
