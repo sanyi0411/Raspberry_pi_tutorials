@@ -45,7 +45,7 @@ ssh username@raspberrypi
 ### <u>Setup passwordless login with SSH keys</u>
 
 - Windows
-    - Check if you already have a public key and create on if needed.
+    - Check if you already have a public key and create one if needed.
         - Go to `C:\Users\<your username>` and check if you have an `.shh` folder and within that an `id_rsa.pub` file
         - If not, open a terminal and type `ssh-keygen`. When asked for filename and passphrase, leave those empty, just hit Enter. Now you have an `id_rsa.pub` file
     - Open a new terminal window and connect to the Pi via SSH
