@@ -4,7 +4,7 @@ Congrats on getting a Pi!
 
 ## Get some storage
 
-The Pi has build in memory (RAM) but no storage. To start using your Pi you will need some kind storage where your operating system (and other files) will reside.
+The Pi has build in memory (RAM) but no storage. To start using your Pi you will need some kind of storage where your operating system (and other files) will reside.
 
 - If you are a beginner and just want to boot up your Pi, the easiest thing to do is to get an SD card. 
 - If you know you will use your Pi for heavier tasks, like as a server, streaming movies, or as NAS, I recommend to get an SSD.
