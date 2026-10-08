@@ -20,18 +20,18 @@ env_get() {
 # ---------------------------------------------------------------------------
 info "Checking preconditions"
 
-[[ $EUID -ne 0 ]] || die "Run as your normal user (sanyi0411), not root or sudo."
+[[ $EUID -ne 0 ]] || die "Run as your normal user, not root or sudo."
 command -v sudo >/dev/null || die "sudo is required."
 
 arch=$(uname -m)
 [[ $arch == aarch64 ]] || warn "Architecture is $arch, expected aarch64 (64-bit Pi OS). Images are arm64/amd64 multi-arch, so this may still work."
 
 if [[ ! -f .env ]]; then
-    [[ -f .env.example ]] || die "Neither .env nor .env.example found in $PWD."
+    [[ -f .env.template ]] || die "Neither .env nor .env.template found in $PWD."
     cp .env.example .env
     info "Created .env from .env.example -- review it before the stack goes live."
 fi
-chmod 600 .env
+chmod 700 .env
 
 puid=$(env_get PUID)
 pgid=$(env_get PGID)
