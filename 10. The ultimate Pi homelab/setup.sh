@@ -10,11 +10,11 @@ set -euo pipefail
 cd "$(dirname "$(readlink -f "$0")")"
 
 info() { printf '\n\033[1;34m==>\033[0m %s\n' "$*"; }
-warn() { printf '\033[1;33m[warn]\033[0m %s\n' "$*" >&2; }
+warn() { printf '\n\033[1;33m[warn]\033[0m %s\n' "$*" >&2; }
 die()  { printf '\033[1;31m[error]\033[0m %s\n' "$*" >&2; exit 1; }
 
 env_get() {
-    sed -n -E "s/^$1=//p" .env | tail -n1 | sed -E -e 's/^"(.*)"$/\1/' -e "s/^'(.*)'\$/\1/"
+    sed -n -E "s/^$1=//p" .env | tail -n1 | sed -E -e 's/\r$//' -e 's/^(.*)"$/\1/' -e "s/^'(.*)'\$/\1/"
 }
 
 # ---------------------------------------------------------------------------
@@ -31,7 +31,7 @@ if [[ ! -f .env ]]; then
     cp .env.example .env
     info "Created .env from .env.example -- review it before the stack goes live."
 fi
-chmod 700 .env
+chmod 600 .env
 
 puid=$(env_get PUID)
 pgid=$(env_get PGID)
