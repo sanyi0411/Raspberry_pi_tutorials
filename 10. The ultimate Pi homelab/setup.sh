@@ -107,7 +107,7 @@ compose ps
 # ---------------------------------------------------------------------------
 info "qBittorrent first-login password"
 sleep 5
-if compose logs qbittorrent 2>/dev/null | grep -i 'temporary password'; then
+if compose logs --since 60s qbittorrent 2>/dev/null | grep -i 'temporary password'; then
     echo "    Log in as 'admin' with the password above, then change it immediately in"
     echo "    Tools > Options > Web UI. The temporary one is regenerated on every restart."
 else
