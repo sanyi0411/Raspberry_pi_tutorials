@@ -12,6 +12,7 @@ On a freshly installed Rapsberry Pi
 - Copy all files to your Pi
 - Copy the `.env.example` to `.env`
 - Update `.env` with your information
+- Make `setup.sh` executable: `chmod 700 ./setup.sh`
 - Run `setup.sh`
 
 ## Notes
